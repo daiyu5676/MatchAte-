@@ -19,4 +19,4 @@ A cute, pink-themed memory matching game built using **C++ (via WebAssembly)** a
 ## ▶️ How to Run
 1. Clone the repository:
    ```bash
-   git clone <your-repo-link>
+   git clone https://github.com/daiyu5676/MatchAte-.git
