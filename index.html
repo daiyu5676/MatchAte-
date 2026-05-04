@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Console</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Match It!
+        </h1>
+        <button class="btn" onclick="restartGame()">Restart</button>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- LEFT: GAME -->
+        <section class="game-section">
+            <div id="streakMessage"></div>
+            <div id="dashboard">
+                <div class="stat">
+                    <span class="label">Time</span>
+                    <span id="timeCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Moves</span>
+                    <span id="moveCount">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Streak</span>
+                    <span id="streakCount">0</span>
+                </div>
+            </div>
+
+            <div id="game-board"></div>
+
+        </section>
+
+        <!-- RIGHT: LEADERBOARD -->
+        <aside class="sidebar">
+            <h2>Sweet Scores</h2>
+            <ul id="scoreList"></ul>
+        </aside>
+
+    </main>
+
+</div>
+
+<div id="winModal" class="hidden">
+    <div class="modal-box">
+        <h2>🎉 Mission Complete!</h2>
+
+        <p id="finalStats"></p>
+
+        <input 
+            type="text" 
+            id="playerNameInput" 
+            placeholder="Enter your name"
+        />
+
+        <button id="saveScoreBtn">Save Score</button>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+</div>
+
+
+
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
